@@ -45,7 +45,7 @@ public class ASCII_Art {
     /**
      * method: printString
      * This is the method that is actually running, it is a void, it does not return anything
-     * @return out, which is the result of printString
+     * @return (str)out, which is the result of printString
      */
 
     public static String printString()
