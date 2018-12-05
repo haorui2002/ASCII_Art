@@ -27,7 +27,7 @@ public class ASCII_Art {
     public static final String MIDS  = "8 3/1o1\\2\t8 3/1o1\\2\t8 3/1o1\\2\t8 3/1o1\\2\t8 3/1o1\\07 2/1o2/2\\2\t7 2/1o2/2\\2\t7 2/1o2/2\\2\t7 2/1o2/2\\2\t7 2/1o2/2\\06 2/1\\3/1o2\\2\t6 2/1\\3/1o2\\2\t6 2/1\\3/1o2\\2\t6 2/1\\3/1o2\\2\t6 2/1\\3/1o2\\05 1/1o2\\1/2\\2/1\\1o1\t5 1/1o2\\1/2\\2/1\\1o1\t5 1/1o2\\1/2\\2/1\\1o1\t5 1/1o2\\1/2\\2/1\\1o1\t5 1/1o2\\1/2\\2/1\\1o00";
     public static final String BOTS  = "6 2/1\\1/1o1/3\\2\t6 2/1\\1/1o1/3\\2\t6 2/1\\1/1o1/3\\2\t6 2/1\\1/1o1/3\\2\t6 2/1\\1/1o1/3\\05 1/1o2\\1/2\\2/1\\1o1\t5 1/1o2\\1/2\\2/1o1\\1\t5 1/1o2\\1/2\\2/1o1\\1\t5 1/1o2\\1/2\\2/1o1\\1\t5 1/1o2\\1/2\\2/1o1\\04 1/1\\3/1o2\\2/3\\1\t4 1/1\\3/1o2\\2/3\\1\t4 1/1\\3/1o2\\2/3\\1\t4 1/1\\3/1o2\\2/3\\1\t4 1/1\\3/1o2\\2/3\\03 1/1o1/2\\1/3\\1o3\\1/1\\1\t3 1/1o1/2\\1/3\\1o3\\1/1\\1\t3 1/1o1/2\\1/3\\1o3\\1/1\\1\t3 1/1o1/2\\1/3\\1o3\\1/1\\1\t3 1/1o1/2\\1/3\\1o3\\1/1\\02 1o4\\2/2\\2/1o1/1\\1/1o1\\1\t2 1o4\\2/2\\2/1o1/1\\1/1o1\\1\t2 1o4\\2/2\\2/1o1/1\\1/1o1\\1\t2 1o4\\2/2\\2/1o1/1\\1/1o1\\1\t2 1o4\\2/2\\2/1o1/1\\1/1o1\\00";
     public static final String BASES = "8 1(3_1)2\t8 1(3_1)2\t8 1(3_1)2\t8 1(3_1)2\t8 1(3_1)00";
-    public static String combined = STARS + TOPS + MIDS + BOTS + BASES;
+
     // public static String out = "";
 
     /**
@@ -38,20 +38,24 @@ public class ASCII_Art {
      */
     public static void main(String[] args)
     {
-        System.out.print(printString());
+        String input = STARS + TOPS + MIDS + BOTS + BASES;
+
+        System.out.print(printString(input));
     }
 
 
     /**
      * method: printString
-     * This is the method that is actually running, it is a void, it does not return anything
+     * * This is the method that is actually running, it is a void, it does not return anything
+     * @param input, the string of the "ASCII" code
      * @return (str)out, which is the result of printString
+     * @return
      */
 
-    public static String printString()
+    public static String printString(String input)
     {
         String out = "";
-        String input = combined; //input = teacher given
+        //String input = combined; //input = teacher given
         Integer count; //for while loop, not printing 00 as /n/n
         Character a;
         Character b;
